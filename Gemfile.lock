@@ -101,6 +101,8 @@ GEM
     brakeman (7.0.0)
       racc
     builder (3.3.0)
+    bulma-rails (0.9.4)
+      sassc (~> 2.0)
     capybara (3.40.0)
       addressable
       matrix
@@ -453,6 +455,7 @@ DEPENDENCIES
   activeadmin
   bootsnap
   brakeman
+  bulma-rails (~> 0.9.4)
   capybara
   debug
   devise
