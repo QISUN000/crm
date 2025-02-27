@@ -8,3 +8,13 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+ @import "bulma";
+
+ /* Custom styles */
+ .card {
+   height: 100%;
+ }
+ 
+ .image.is-96x96 {
+   margin: 0 auto;
+ }
