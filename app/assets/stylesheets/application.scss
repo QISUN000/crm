@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+ @import "bulma";
+
+ body {
+  background: #222;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+}
+
+.container {
+  padding: 20px;
+}
+
+.title {
+  color: #0f0;
+  text-align: center;
+  text-shadow: 0 0 10px #0f0;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 2px;
+}
+
+/* Retro terminal-style cards */
+.card {
+  background: #000;
+  border: 2px solid #0f0;
+  border-radius: 0;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  color: #0f0;
+  margin-bottom: 20px;
+}
+
+/* Blinking cursor effect on hover */
+.card:hover::after {
+  content: "_";
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #0f0;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Customer image as "pixel art" */
+.image.is-96x96 {
+  border: 2px solid #0f0;
+  border-radius: 0;
+  overflow: hidden;
+  filter: brightness(1.2) contrast(1.2) grayscale(0.5) sepia(0.2);
+}
+
+.image.is-96x96 img {
+  mix-blend-mode: screen;
+}
+
+/* Customer info */
+.title.is-4 {
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+}
+
+.subtitle.is-6 {
+  color: #0f0;
+  font-style: italic;
+}
+
+.has-text-danger {
+  color: #f00 !important;
+  text-decoration: blink;
+  background: none;
+}
+
+/* Button styling */
+.button {
+  background: #000;
+  color: #0f0;
+  border: 2px solid #0f0;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button:hover {
+  background: #0f0;
+  color: #000;
+}
