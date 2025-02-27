@@ -1,2 +1,18 @@
-<h1>Customers#missing_email</h1>
-<p>Find me in app/views/customers/missing_email.html.erb</p>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Customers Missing Email</h1>
+    
+    <div class="buttons mb-4">
+      <%= link_to "View All", root_path, class: "button is-info" %>
+      <%= link_to "View Alphabetized", customers_alphabetized_path, class: "button is-info" %>
+    </div>
+    
+    <div class="columns is-multiline">
+      <% @customers.each do |customer| %>
+        <div class="column is-one-third">
+          <%= render customer %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
