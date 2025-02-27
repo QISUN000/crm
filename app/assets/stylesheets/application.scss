@@ -53,7 +53,6 @@
   50% { opacity: 0; }
 }
 
-/* Customer image as "pixel art" */
 .image.is-96x96 {
   border: 2px solid #0f0;
   border-radius: 0;
@@ -65,7 +64,6 @@
   mix-blend-mode: screen;
 }
 
-/* Customer info */
 .title.is-4 {
   color: #0f0;
   font-family: 'Courier New', monospace;
@@ -82,7 +80,6 @@
   background: none;
 }
 
-/* Button styling */
 .button {
   background: #000;
   color: #0f0;
