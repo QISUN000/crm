@@ -1,0 +1,29 @@
+<div class="card mb-4">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-96x96">
+          <% if customer.image.attached? %>
+            <%= image_tag customer.image, class: "is-rounded" %>
+          <% else %>
+            <%= image_tag "default_profile.png", class: "is-rounded" %>
+          <% end %>
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4"><%= customer.full_name %></p>
+        <p class="subtitle is-6">
+          <% if customer.email_address.present? %>
+            <%= customer.email_address %>
+          <% else %>
+            <span class="has-text-danger">No email provided</span>
+          <% end %>
+        </p>
+      </div>
+    </div>
+    <div class="content">
+      <p><strong>Phone:</strong> <%= customer.phone_number %></p>
+      <p><%= customer.notes %></p>
+    </div>
+  </div>
+</div>
